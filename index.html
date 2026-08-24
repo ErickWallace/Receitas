@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caderno de Receitas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34">
+            <path d="M8 6 H28 A2 2 0 0 1 30 8 V34 L20 29 L10 34 V8 A2 2 0 0 1 8 6 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="14" y1="14" x2="24" y2="14" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="14" y1="19" x2="24" y2="19" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <div>
+          <h1>Caderno de Receitas</h1>
+          <p class="brand-sub">direto do papel pra tela</p>
+        </div>
+      </div>
+      <div class="search-wrap">
+        <input id="search" type="text" placeholder="Buscar por nome, ingrediente ou tag…" autocomplete="off">
+      </div>
+    </div>
+    <nav class="filters" id="filters" aria-label="Filtrar por categoria">
+      <button class="chip is-active" data-cat="todas">Todas</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div id="status" class="status">Abrindo o caderno…</div>
+    <section id="grid" class="grid" hidden></section>
+    <p id="empty" class="empty" hidden>Nenhuma receita encontrada com esse filtro.</p>
+  </main>
+
+  <div id="overlay" class="overlay" hidden>
+    <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <button class="close" id="closeBtn" aria-label="Fechar receita">×</button>
+      <div id="sheetContent"></div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <p>Feito com Google Sheets + Apps Script — atualiza sozinho toda vez que uma receita nova entra na planilha.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
