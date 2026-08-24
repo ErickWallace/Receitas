@@ -225,6 +225,9 @@ main{ max-width: 1080px; margin: 0 auto; padding: 32px 24px 60px; }
   padding: 40px 16px;
   overflow-y:auto;
 }
+.overlay[hidden]{
+  display: none;
+}
 .sheet{
   position: relative;
   max-width: 640px;
